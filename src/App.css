@@ -1,38 +1,134 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav {
+    background-color: #1f1f1f;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container {
+    background-color: #2a2a2a;
+    width: 70%;
+    margin: 40px auto;
+    min-height: 100vh;
+    padding: 4vmax 8vmax;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.container > form {
+    display: flex;
+    flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type='text'],
+textarea,
+button {
+    padding: 15px;
+    border: 1px solid #424242;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: 1rem;
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+input[type='text']:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+    border-color: #6200ea;
+    box-shadow: 0 0 5px rgba(98, 0, 234, 0.5);
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    background-color: #6200ea;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3700b3;
+}
+
+.container > h1 {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 2.5rem;
+    color: #bb86fc;
+}
+
+.task {
+    display: flex;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+.task:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.task span {
+    color: #a0a0a0;
+}
+
+.task > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.task input[type='checkbox'] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.task-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.task button {
+    border: none;
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #bb86fc;
+    color: white;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.task button:hover {
+    background-color: #3700b3;
+    transform: scale(1.1);
+}
+
+.task button:active {
+    transform: scale(1);
 }
